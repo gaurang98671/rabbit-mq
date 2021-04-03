@@ -6,6 +6,14 @@ channel = connection.channel()
 
 channel.queue_declare(queue='hello')
 
-channel.basic_publish(exchange='', routing_key='hello', body="Privyet Comrade!!!")
-print(" [x] Sent 'Hello World!'")
+a=True
+while(a):
+    message= str(input("Enter message: "))
+    if(message=="kill yourself"):
+        a=False
+    else:
+        channel.basic_publish(exchange='', routing_key='hello', body=message)
+        print("Message send: ", message)
+
+
 connection.close()

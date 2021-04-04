@@ -4,7 +4,8 @@ connection = pika.BlockingConnection(
     pika.ConnectionParameters(host='localhost'))
 channel = connection.channel()
 
-channel.queue_declare(queue='hello')
+channel.exchange_declare(exchange='logs', exchange_type='fanout')
+#channel.exchange_declare(exchange='logs', exchange_type='fanout')
 
 a=True
 while(a):
@@ -12,7 +13,8 @@ while(a):
     if(message=="kill yourself"):
         a=False
     else:
-        channel.basic_publish(exchange='', routing_key='hello', body=message)
+
+        channel.basic_publish(exchange='logs', routing_key='', body=message)
         print("Message send: ", message)
 
 

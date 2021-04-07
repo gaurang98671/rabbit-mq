@@ -5,7 +5,7 @@ connection = pika.BlockingConnection(
 channel = connection.channel()
 
 channel.exchange_declare(exchange='logs', exchange_type='fanout')
-#channel.exchange_declare(exchange='logs', exchange_type='fanout')
+
 
 a=True
 while(a):

@@ -4,7 +4,7 @@ def main():
     connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
     channel = connection.channel()
 
-    channel.exchange_declare(exchange='direct_logs', exchange_type='direct')
+    channel.exchange_declare(exchange='direct_logs', exchange_type='topic')
 
     result= channel.queue_declare(queue='', exclusive= True)
     keys= sys.argv[1:]

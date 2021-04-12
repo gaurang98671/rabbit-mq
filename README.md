@@ -16,10 +16,10 @@ Uses round ribbon to disrtubute messages accross all consumers
 ## Fanout
 Uses pub-sub approach to send each message to all subscribed comsumers
 
-## Direct routing 
+## Selective routing
 Uses routing key to distrubute message
 
-## Selective routing
+## Pattern routing
 Distrubutes messages based on routing key's pattern
 
 

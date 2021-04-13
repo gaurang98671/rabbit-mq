@@ -22,4 +22,7 @@ Uses routing key to distrubute message
 ## Pattern routing
 Distrubutes messages based on routing key's pattern
 
+## RPC
+RPC protocol using rabbitMQ
+
 

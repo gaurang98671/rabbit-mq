@@ -13,14 +13,22 @@
 ## Work queues 
 Uses round ribbon to disrtubute messages accross all consumers
 
+![](https://www.rabbitmq.com/img/tutorials/python-two.png)
+
 ## Fanout
 Uses pub-sub approach to send each message to all subscribed comsumers
+
+![](https://www.rabbitmq.com/img/tutorials/python-three-overall.png)
 
 ## Selective routing
 Uses routing key to distrubute message
 
+![](https://www.rabbitmq.com/img/tutorials/python-four.png)
+
 ## Pattern routing
 Distrubutes messages based on routing key's pattern
+
+![](https://www.rabbitmq.com/img/tutorials/python-five.png)
 
 ## RPC
 RPC protocol using rabbitMQ
